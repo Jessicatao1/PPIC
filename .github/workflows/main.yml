@@ -16,11 +16,11 @@ jobs:
         if: github.actor == 'Jessicatao1'
         run: | 
           echo "Jessica Tao detected"
-          sed -i '/<\/body>/i\\ <p> Updated by Jessica on '"$(date)"'</p>' Index.html
+          sed -i '/<\/body>/i\\ <p> Updated by Jessica on '"$(date)"'</p>' index.html
 
       - name: Update HTML (Member 1)
         if: github.actor == 'ConnorTang2110'
         run: | 
           echo "Team member 1 Connor Tang detected"
-          sed -i '/<\/body>/i <p>Updated by Member 1 on '"$(date)"'</p>' Index.html
+          sed -i '/<\/body>/i <p>Updated by Member 1 on '"$(date)"'</p>' index.html
 
