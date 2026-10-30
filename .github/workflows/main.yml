@@ -11,4 +11,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        
+          
+      - name: Update HTML - Jessica Tao
+        if: github.actor == 'Jessicatao1'
+        run: | 
+          echo "Jessica Tao detected"
+          sed -i '/<\/body>/i\\ <p> Updated by Jessica on '"$(date)"'</p>' Index.html
+
